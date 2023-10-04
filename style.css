@@ -1,0 +1,164 @@
+body {
+	font-family: 'Poppins', sans-serif;
+	box-sizing: border-box;
+	margin: 0;
+}
+
+main {
+	display: flex;
+	position: relative;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	max-width: 1440px;
+	margin: 0 auto;
+	background-color: hsl(0, 0%, 94%);
+	height: 100vh;
+}
+
+.container {
+	width: 100%;
+	max-width: 41em;
+	min-width: 18em;
+	background-color: hsl(0, 0%, 100%);
+	padding: 3em;
+	margin: 0 2em;
+	border-radius: 2em 2em 12em 2em;
+}
+
+.inputs {
+	display: flex;
+	column-gap: 2em;
+}
+
+input[type='number'] {
+	padding: 10px 15px;
+	margin: 5px 0;
+	line-height: 1.5;
+	font-size: 1.5em;
+	color: black;
+	font-weight: 700;
+	border-radius: 0.4em;
+	border: 1px solid hsl(0, 0%, 86%);
+	background-color: hsl(0, 0%, 100%);
+}
+
+.day-input,
+.month-input,
+.year-input {
+	max-width: 9.3em;
+	min-width: 6.5em;
+	display: flex;
+	flex-direction: column;
+}
+
+.error-day,
+.error-month,
+.error-year {
+	color: hsl(0, 100%, 67%);
+	opacity: 0;
+}
+
+label {
+	font-size: 0.7em;
+	letter-spacing: 0.4em;
+}
+
+span {
+	font-size: 0.8em;
+}
+
+label,
+::placeholder {
+	font-weight: 700;
+	text-transform: uppercase;
+	color: hsl(0, 1%, 44%);
+}
+
+.line {
+	margin-top: 2.5em;
+	border-bottom: 1px solid hsl(0, 0%, 86%);
+}
+
+.middle {
+	position: relative;
+}
+
+.circle {
+	height: 5em;
+	width: 5em;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 50%;
+	background-color: hsl(259, 100%, 65%);
+	position: absolute;
+	top: -2.5em;
+	right: 0;
+	cursor: pointer;
+	border: none;
+}
+
+.result {
+	display: flex;
+	align-items: center;
+	color: hsl(259, 100%, 65%);
+	font-size: 2em;
+	font-weight: 800;
+	font-style: italic;
+}
+
+.result > span {
+	font-size: 2em;
+	font-weight: 800;
+	font-style: italic;
+}
+
+i {
+	color: black;
+	font-size: 2em;
+	font-weight: 800;
+	margin-left: 0.3em;
+}
+
+@media screen and (max-width: 670px) {
+	.container {
+		padding: 2em;
+	}
+	.inputs {
+		column-gap: 1em;
+	}
+	input[type='number'] {
+		font-size: 0.9em;
+	}
+	.day-input,
+	.month-input,
+	.year-input {
+		min-width: 3.5em;
+	}
+	.error {
+		font-size: 0.6em;
+	}
+	.line {
+		margin: 2em 0 4em 0;
+	}
+	.circle {
+		height: 4em;
+		width: 4em;
+		top: -2em;
+		right: calc(50% - 2em);
+	}
+	.result {
+		font-size: 1.5em;
+	}
+}
+
+footer {
+	position: absolute;
+	bottom: 0;
+	font-size: 1em;
+	text-align: center;
+}
+footer a {
+	color: hsl(228, 45%, 44%);
+}

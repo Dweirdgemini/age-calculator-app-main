@@ -1,37 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Age calculator app</title>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./assets/images/favicon-32x32.png"
+		/>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,800&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="./style.css" />
+		<title>Frontend Mentor | Age calculator app</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
-
-  Day
-  DD
-
-  Month
-  MM
-
-  Year
-  YYYY
-
-  -- years
-  -- months
-  -- days
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+		<!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+	</head>
+	<body>
+		<main>
+			<div class="container">
+				<div class="inputs">
+					<div class="day-input">
+						<label for="day" id="day-label">Day</label>
+						<input type="number" name="day" id="day" placeholder="DD" />
+						<span class="error-day">Must be a valid day</span>
+					</div>
+					<div class="month-input">
+						<label for="month" id="month-label">Month</label>
+						<input type="number" name="month" id="month" placeholder="MM" />
+						<span class="error-month">Must be a valid month</span>
+					</div>
+					<div class="year-input">
+						<label for="year" id="year-label">Year</label>
+						<input type="number" name="year" id="year" placeholder="YYYY" />
+						<span class="error-year">Must be in the past</span>
+					</div>
+				</div>
+				<div class="middle">
+					<div class="line"></div>
+					<button id="submitBtn" title="Submit" class="circle">
+						<img src="./assets/images/icon-arrow.svg" alt="submit arrow icon" />
+					</button>
+				</div>
+				<div class="results">
+					<div class="result">
+						<span id="years-result">--</span>
+						<i>years</i>
+					</div>
+					<div class="result">
+						<span id="months-result">--</span>
+						<i>months</i>
+					</div>
+					<div class="result">
+						<span id="days-result">--</span>
+						<i>days</i>
+					</div>
+				</div>
+			</div>
+			<footer>
+				Challenge by
+				<a
+					href="https://www.frontendmentor.io/challenges/age-calculator-app-dF9DFFpj-Q"
+					target="_blank"
+					>Age Calculator App - Frontend Mentor</a
+				>. Coded by
+				<a href="https://www.frontendmentor.io/profile/jadilovic"
+					>Jasmin Adilovic</a
+				>.
+			</footer>
+		</main>
+		<script src="./index.js"></script>
+	</body>
 </html>
